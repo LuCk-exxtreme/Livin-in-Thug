@@ -42,4 +42,6 @@ For now reporting bugs, requesting features, feedbacks: join my support server.
 
 [Invite me](https://top.gg/bot/918718860365033523)
 
+[vote me](https://top.gg/bot/918718860365033523/vote)
 
+[support server](https://discord.gg/FSMTeH3hse)
