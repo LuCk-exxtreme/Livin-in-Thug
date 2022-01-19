@@ -77,7 +77,7 @@ bot.command({
     name:"remove ml",
     aliases:["remove message log"],
     code:`The bot will no longer send info about message edits or deletes.
-$setServerVar[ml;922789993133518899]
+$setServerVar[ml;939393028283382]
 $onlyPerms[manageserver; you need to have manage server perm]`
 })
 bot.command({
@@ -590,7 +590,7 @@ $onlyIf[$channelID==$getServerVar[channel];]`
 //for the following command explaination contact me coz I may or may not add it the readme.md file
 bot.command({
     name:"$alwaysExecute",
-    code:`$channelSendMessage[932589549853474846;$UserTag[$findUser[$message]] Just voted me]
+    code:`$channelSendMessage[add the channelID where you want to store vote logs;$UserTag[$findUser[$message]] Just voted me]
 $sendDM[thanks for voting me, vote rewards are coming soon;$message]
 $onlyForIDs[your second bot ID;your ID; ]
 $onlyIf[$channelID==channelID where your second bot will send the voterID;]`,
