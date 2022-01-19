@@ -15,5 +15,31 @@ always remember it is http not https here.
 and add the full code with changes except where told to in your second bot.
 4.Now test the webhook, if any problems occur you can join my server and ask me : https://discord.gg/FSMTeH3hse.
 
+# About Livin' in Thug
+Pls note: Before using any command set a channel for bot's responce by using cool channel <#mention a channel>.
+
+Current features:
+
+3 Custom prefix,
+Image generation,
+24/7 Music,
+AI chat,
+Moderation,
+Fun
+
+Upcoming:
+Economy,
+Games,
+Watch togather (yt, games etc. played in vc),
+Grand Theft auto related games,
+Bug, suggestion, feedback send commands.
+
+For setting custom prefix run cool prefix <here enter 3 prefixes the gap between your 3 words is going to be a separator so be careful>.
+
+For now reporting bugs, requesting features, feedbacks: join my support server.
+
+# Links
+
+Invite me: https://top.gg/bot/918718860365033523
 
 
