@@ -1,6 +1,6 @@
 const aoijs = require("aoi.js")
 const bot = new aoijs.Bot({
-token: "OTE4NzE4ODYwMzY1MDMzNTIz.YbLVnQ.pi99jPim8_i2P7bS5IkllS9T5g8", //Discord Bot Token
+token: "Add your bot token in here", //Discord Bot Token
 prefix: ["$getServerVar[prefix1]", "$getServerVar[prefix2]", "$getServerVar[prefix3]", "Cool", "cool", "<@!$clientID>","<@$clientID>"],//Discord Bot Prefix
 intents: "all",
 mobilePlatform : true,
@@ -10,7 +10,8 @@ interpreter:false
 
 },
 fetchInvites: true,
-dbhToken:"danbot–xG6KxRdNJZQRXQb8NL8WVxLsBfFa$%nFPJ9FovLX"
+//only for danbot users:
+dbhToken:"add you danbot apikey"
 })
 const Lavalink = new aoijs.Lavalink(bot);
 Lavalink.addNode({
@@ -19,11 +20,12 @@ Lavalink.addNode({
  name: "aoi.js",
  secure: false,
  })
+//only for danbot users:
 var DanBotHosting = require("danbot-hosting");
  
 async () => {
 
-  const API = new DanBotHosting.Client("xG6KxRdNJZQRXQb8NL8WVxLsBfFa$%nFPJ9FovLX", bot);
+  const API = new DanBotHosting.Client("your danbot apikey", bot);
  
   // Start posting
   let initalPost = await API.autopost();
@@ -51,11 +53,6 @@ $addField[1;DataBase ping;$dbPing ms]`
 bot.command({
     name:"name",
     code:`$serverName[$message]`
-})
-bot.command({
-    name:"exit",
-    code:`$botLeave[925569938142412811]
-I left $serverName[925569938142412811] as per orders`
 })
 bot.command({
     name:"8ball",
@@ -571,7 +568,7 @@ $addField[1;Installs;$jsonRequest[https://api.popcat.xyz/playstore?q=$replaceTex
 $addField[1;Recent Comments;$jsonRequest[https://api.popcat.xyz/playstore?q=$replaceText[$message; ;+];comment]]
 $thumbnail[1;$getObjectProperty[icon]]
 $sendMessage[search for $message on play store ]
-$createObject[$jsonRequest[https://api.miduwu.ml/playstore?q=$replaceText[$message; ;+]&key=vDIG5ZRGmpE1ScIFSe95eiyrW]]
+$createObject[$jsonRequest[https://api.miduwu.ml/playstore?q=$replaceText[$message; ;+]&key=get your own]]
 $onlyIf[$guildID==$guildID;]$onlyIf[$channelID==$getServerVar[channel];]`
 });
 bot.command({
@@ -590,12 +587,13 @@ $sendMessage[searching for the gif of $message]
 $onlyIf[$guildID==$guildID;]
 $onlyIf[$channelID==$getServerVar[channel];]`
 })
+//for the following command explaination contact me coz I may or may not add it the readme.md file
 bot.command({
     name:"$alwaysExecute",
     code:`$channelSendMessage[932589549853474846;$UserTag[$findUser[$message]] Just voted me]
 $sendDM[thanks for voting me, vote rewards are coming soon;$message]
-$onlyForIDs[920927052629159947;880462812537843754; ]
-$onlyIf[$channelID==932589549853474846;]`,
+$onlyForIDs[your second bot ID;your ID; ]
+$onlyIf[$channelID==channelID where your second bot will send the voterID;]`,
     nonPrefixed:true
 })
 bot.command({
@@ -605,12 +603,6 @@ bot.command({
 $argsCheck[>0;weather of? ]
 $onlyIf[$guildID==$guildID;]
 $onlyIf[$channelID==$getServerVar[channel];]`
-});
-bot.command({
-name:"prank",
-    code:`$channelSendMessage[$splitText[1];$splitText[2];yes]
-$textSplit[$message;~]
-$onlyIf[$authorID==880462812537843754;]`
 });
 bot.command({
     name:"8D",
@@ -736,23 +728,23 @@ Lavalink.trackEndCommand({
 });
 //Ready Event
 bot.readyCommand({
-    channel: "918371237930074152",
+    channel: "channelID of your bot logs",
     code: `I'm online $log[Ready on $userTag[$clientID]]`
 });
 bot.readyCommand({
-channel:"932551085007196200",
+channel:"make a channel where a bot will post the voter and enter the channelID here",
 code: `$djsEval[const { AutoPoster } = require('topgg-autoposter');
-AutoPoster('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkxODcxODg2MDM2NTAzMzUyMyIsImJvdCI6dHJ1ZSwiaWF0IjoxNjQyNDA1NTg4fQ.6TYbUzo7Rr_C6AhAx1qOUg5eSEz7kiyYubZJHKwB6iU', client).on('posted', () => { client.channels.cache.get("932551085007196200").send('Posted stats to Top.gg') 
+AutoPoster('your top.gg webhook token', client).on('posted', () => { client.channels.cache.get("same ID as in the channel we add for this command").send('Posted stats to Top.gg') 
 });no]`
 });
 bot.readyCommand({
-    channel:"932551085007196200",
+    channel:"same as above",
     code:`$djsEval[const { AutoPoster } = require('topgg-autoposter')
 
-const poster = AutoPoster('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkxODcxODg2MDM2NTAzMzUyMyIsImJvdCI6dHJ1ZSwiaWF0IjoxNjQyNDA1NTg4fQ.6TYbUzo7Rr_C6AhAx1qOUg5eSEz7kiyYubZJHKwB6iU', client)
+const poster = AutoPoster('your top.gg webhook token', client)
 
 poster.on('posted', (stats) => {
-  client.channels.cache.get("932551085007196200").send('Posted stats to Top.gg | bot in $servercount servers')
+  client.channels.cache.get("same as channelID you entered").send('Posted stats to Top.gg | bot in $servercount servers')
 });no]`
 })
 bot.variables({
@@ -788,14 +780,14 @@ bot.status({
 })
 bot.onGuildLeave()
 bot.guildLeaveCommand({
-channel: "918371366934290473",
+channel: "your bot server log channelID",
 code: `
 I have left $serverName!
 `
 })
 bot.onGuildJoin()
 bot.guildJoinCommand({
-channel: "918371366934290473",
+channel: "same as above",
 code: `
 Ive joined $serverName!
 `
@@ -804,19 +796,19 @@ bot.loopCommand({
 code: `
 I'm online rn.
 `,
-channel: "918371237930074152",
+channel: "your bot status logs channelID",
 executeOnStartup: true,
 every: 300000
 })
 
 /*
-This command will send 'hi' to the given channel id every 5 minutes. 
+This command will send 'I'm online rn' to the given channel id every 5 minutes. 
 ExecuteOnStartup means when the bot starts/comes online, the loop will start
 */
 
 bot.guildJoinCommand({
     channel: "$systemChannelID[$guildID]",
-    code:`Hi, I'm Thug my prefix is cool(yes the prefix is cool LMAO), and my help command is cool help before you start you need to ask a person with manage channel perm to set a response channel for me`
+    code:`Hi, I'm $username[$clientID] my prefix is enter your own prefix, and my help command is your prefix and help command name before you start you need to ask a person with manage channel perm to set a response channel for me`
 })
 bot.onJoin()
 bot.joinCommand({ 
