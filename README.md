@@ -5,7 +5,7 @@ There will a new repo when my bot's v3 is out.
 # ⚠️ Cautions
 You can fork the project but you need to take care of following:
 1. I've made changes to the index.js in order to not leak any private things in there.
-2. Some changes needs you to enter info about your bot so look out for those changes since I've not mentioned where you need to channel here.
+2. Some changes needs you to enter info about your bot so look out for those changes since I've not mentioned where you need to change here.
 
 # Top.gg data for your bot
 The following guide is for how to set up vote reward only as it is hard.
