@@ -1,0 +1,15 @@
+bot.readyCommand({
+    channel:"The channelID where you want to send the userID of voter",
+    code:`$djsEval[const express = require('express')
+
+const Topgg = require('@top-gg/sdk')
+
+const app = express() 
+
+const webhook = new Topgg.Webhook('Your top.gg webhook authorization not token') 
+
+app.post('/dblwebhook', webhook.listener(vote => {
+
+  client.channels.cache.get("same as the channelID you entered above").send(vote.user) 
+
+}))
