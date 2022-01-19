@@ -40,6 +40,6 @@ For now reporting bugs, requesting features, feedbacks: join my support server.
 
 # Links
 
-Invite me: https://top.gg/bot/918718860365033523
+[Invite me](https://top.gg/bot/918718860365033523)
 
 
