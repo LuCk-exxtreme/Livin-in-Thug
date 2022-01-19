@@ -1,5 +1,6 @@
 # Livin-in-Thug
 My bot Livin' in Thug version 1 repo.
+There will a new repo when my bot's v3 is out.
 
 # ⚠️ Cautions
 You can fork the project but you need to take care of following:
